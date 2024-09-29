@@ -28,34 +28,27 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const videoCards = document.querySelectorAll('.video-card');
     const modal = document.getElementById('video-modal');
-    const iframe = document.getElementById('video-iframe');
+    const youtubeLink = document.getElementById('youtube-link');
     const closeModal = document.querySelector('.close-modal');
 
     // Ouvrir la modal au clic sur une carte vidéo
-    document.addEventListener("DOMContentLoaded", function () {
-        const videoCards = document.querySelectorAll('.video-card');
-        const modal = document.getElementById('video-modal');
-        const youtubeLink = document.getElementById('youtube-link');
-        const closeModal = document.querySelector('.close-modal');
-    
-        // Ouvrir la modal au clic sur une carte vidéo
-        videoCards.forEach(card => {
-            card.addEventListener('click', () => {
-                const videoUrl = card.getAttribute('data-video');
-                youtubeLink.href = videoUrl;
-                modal.style.display = 'flex';
-            });
-        });
-    
-        // Fermer la modal
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-    
-        // Fermer la modal en cliquant en dehors de la zone de contenu
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
+    videoCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const videoUrl = card.getAttribute('data-video');
+            youtubeLink.href = videoUrl;
+            modal.style.display = 'flex';
         });
     });
+
+    // Fermer la modal
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Fermer la modal en cliquant en dehors de la zone de contenu
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
