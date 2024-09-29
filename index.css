@@ -248,3 +248,12 @@ body {
 }
 
 /* Partie Préstations */
+
+h2 {
+  text-align: center;
+  margin: 40px 0;
+  font-family: Robot, sans-serif;
+  font-size: 36px;
+  color: #f36e6ed5;
+  font-weight: 700;
+}
