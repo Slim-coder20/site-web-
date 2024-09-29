@@ -328,3 +328,32 @@ h3 {
     align-items: center;
   }
 }
+
+/* La partie Vidéos du site */
+
+h2 {
+  text-align: center;
+  font-family: roboto, sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 40px 0;
+}
+.vidéos {
+  padding: 40px;
+}
+.vidéo-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.video-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
