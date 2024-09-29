@@ -260,3 +260,8 @@ h2 {
 .prestations {
   padding: 20px;
 }
+.prestations-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
