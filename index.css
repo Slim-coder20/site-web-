@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Robot, sans-serif;
+  line-height: 1.6;
+}
+
+/* Barre de navigation */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fdfdfd9c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  border-bottom: 1px solid black;
+}
+.navbar .logo img {
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #e78cf4;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links a {
+  color: #f44f4fd5;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+}
+.nav-links a:hover {
+  color: #f60b0b;
+}
+
+/* Style du boutton hamburger */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Style de la hero section */
+
+.hero {
+  height: 100vh;
+  background-image: url(./Photos/Seguin/groupe\ 3.JPG);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent sur l'image */
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.hero h1 span {
+  color: #f36e6ed5;
+}
+
+.hero p {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.hero p span {
+  color: #f36e6ed5;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #f36e6ed5;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #ea301f;
+}
+
+/* Media Queries (pour la partie responsive) */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(33, 30, 30, 0.336);
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 15px 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+/* Section du Groupe */
+
+/* Section du groupe */
+.groupe-section {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+.groupe-section h1 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #f36e6ed5;
+  text-transform: uppercase;
+}
+.groupe-section h2 {
+  color: #f36e6ed5;
+}
+
+.groupe-section p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  padding: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+/* Cartes tournantes */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px; /* Création d'un effet 3D */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Rotation au survol */
+}
+
+/* Face avant de la carte */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden; /* Empêche le dépassement de contenu */
+}
+
+.flip-card-front img {
+  width: 100%; /* Image prend toute la largeur du conteneur */
+  height: 100%; /* Image prend toute la hauteur du conteneur */
+  object-fit: cover; /* Conserve le ratio d'aspect de l'image */
+}
+
+/* Face arrière de la carte */
+.flip-card-back {
+  background-color: #333;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Partie Préstations */
