@@ -476,9 +476,91 @@ h3 {
 }
 
 /* Section contact création de formulaire */
-h2 {
+.contactez-nous {
   text-align: center;
+  font-weight: 500;
+  font-family: Roboto, sans-serif;
   font-size: 2.5rem;
   margin: 40px 0;
-  color: #f36e6ed5;
+  color: #ffffffd5;
+}
+
+.contact {
+  padding: 40px 20px;
+  background-color: #fb8383;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(240, 150, 240);
+  border-radius: 8px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #fcfcfc;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2a9d8f;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.submit-btn {
+  background-color: #2a9d8f;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #21867a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .submit-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
 }
