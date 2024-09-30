@@ -474,3 +474,11 @@ h3 {
     font-size: 0.9rem;
   }
 }
+
+/* Section contact création de formulaire */
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 40px 0;
+  color: #f36e6ed5;
+}
