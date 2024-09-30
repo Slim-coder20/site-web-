@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
 // La Partie Vidéos du site // 
 
 document.addEventListener("DOMContentLoaded", function () {
