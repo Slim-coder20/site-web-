@@ -53,20 +53,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// section footer // 
-
-document.addEventListener('DOMContentLoaded', function () {
-    const links = document.querySelectorAll('a[href^="#"]');  // Sélectionne tous les liens ancrés
-
-    links.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();  // Empêche le comportement par défaut
-            const target = document.querySelector(this.getAttribute('href'));  // Cible la section avec l'ID correspondant
-
-            window.scrollTo({
-                top: target.offsetTop,  // Défile vers la section cible
-                behavior: 'smooth'  // Ajoute un défilement fluide
-            });
-        });
-    });
-});
