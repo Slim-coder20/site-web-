@@ -6,6 +6,25 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+// navigation site // 
+
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('a[href^="#"]');
+  
+    links.forEach(link => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+  
+        window.scrollTo({
+          top: target.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+  
+
 // la partie prestations // 
 
 document.addEventListener('DOMContentLoaded', function () {
