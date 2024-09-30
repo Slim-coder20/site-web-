@@ -427,3 +427,50 @@ h3 {
   }
 }
 /* Section concerts */
+.concerts {
+  padding: 40px;
+}
+
+.concert-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.concert-list li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px 0;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.concert-list li:hover {
+  background-color: #f1f1f1;
+}
+
+.concert-list h3 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.concert-list p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .concerts {
+    padding: 20px;
+  }
+
+  .concert-list h3 {
+    font-size: 1.2rem;
+  }
+
+  .concert-list p {
+    font-size: 0.9rem;
+  }
+}
