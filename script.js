@@ -8,21 +8,21 @@ hamburger.addEventListener('click', () => {
 
 // la partie prestations // 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".details-btn");
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('a[href^="#"]');
 
-    buttons.forEach(button => {
-        button.addEventListener("click", (event) => {
-            const formule = event.target.getAttribute("data-formule");
-            if (formule === "quartet") {
-                alert("Formule Quartet : Maximum de groove pour 933 €");
-            } else if (formule === "duo") {
-                alert("Formule Duo : Plus intimiste pour 465 €");
-            }
+    links.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+
+            window.scrollTo({
+                top: target.offsetTop,
+                behavior: 'smooth'
+            });
         });
     });
 });
-
 // La Partie Vidéos du site // 
 
 document.addEventListener("DOMContentLoaded", function () {
