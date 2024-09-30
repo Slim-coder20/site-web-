@@ -62,7 +62,7 @@ body {
 .hamburger .bar {
   width: 25px;
   height: 3px;
-  background: white;
+  background: rgb(243, 135, 135);
   margin: 4px 0;
   transition: 0.3s;
 }
@@ -136,7 +136,7 @@ body {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: rgba(33, 30, 30, 0.336);
+    background-color: #56494981;
     width: 100%;
     text-align: center;
     flex-direction: column;
