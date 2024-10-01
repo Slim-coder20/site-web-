@@ -249,6 +249,10 @@ body {
 }
 
 /* Partie Préstations */
+.prestation-link {
+  text-decoration: none;
+  color: inherit;
+}
 
 h2 {
   text-align: center;
@@ -280,6 +284,7 @@ h2 {
 }
 .prestation-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .prestation-header {
