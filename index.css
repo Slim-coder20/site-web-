@@ -284,6 +284,9 @@ h2 {
 }
 .prestation-card:hover {
   transform: scale(1.05);
+  background-color: #e2c3e894;
+
+  transition: 0.3s ease-out;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
