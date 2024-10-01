@@ -71,4 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Fermer la modal en cliquant en dehors de la zone de contenu
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
-            modal.style.display
+            modal.style.display = 'none';
+        }
+    });
+});
+
