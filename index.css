@@ -181,8 +181,10 @@ body {
 }
 .groupe-section h2 {
   color: #f36e6ed5;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
 }
-
 .groupe-section p {
   font-size: 18px;
   margin-bottom: 40px;
