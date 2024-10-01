@@ -574,9 +574,8 @@ textarea {
   margin: 0;
   color: #e63946;
 }
-img {
+.img-logo {
   display: flex;
-  justify-content: center;
   margin-left: 110px;
   height: 70px;
   border-radius: 50%;
