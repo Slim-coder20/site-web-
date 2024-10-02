@@ -666,3 +666,59 @@ textarea {
 }
 
 /* Style de la section Avis */
+
+.avis {
+  padding: 50px 20px;
+}
+.avis h2 {
+  font-size: 2.5rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.avis-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Pour s'adapter aux petits écrans */
+}
+.avis-card {
+  background-color: #e3f3a2;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  max-width: 100%;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.avis-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.avis-text {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-style: italic;
+  color: rgb(69, 141, 236);
+}
+.avis-author span {
+  font-size: 1.2rem;
+  color: #264653;
+  font-weight: bold;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+  .avis-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avis-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
